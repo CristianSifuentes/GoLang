@@ -1,5 +1,8 @@
 package primitives
 
+// package main
+import "fmt"
+
 var intVar int = 42        // all values are possible, but this is a common one, and the default type for untyped integer literals
 var int8Var int8 = -8      // 8 bits, range -128 to 127, postivie numbers are 0 to 127 and negative numbers are -128 to -1
 var int16Var int16 = 1600  // go use only int32 or int64 internally, but int16 is a type alias for int32 with range checks
@@ -52,4 +55,18 @@ const iotaVar1 = iota
 const iotaVar2 = iota + 1
 
 func main() {
+	var a int = 10
+	var b float32 = 3.14
+	var c string = "hola"
+	var d bool = true
+	var e rune = 'ñ'
+	var f complex128 = 2 + 3i // real part is 2 and imaginary part is 3
+
+	fmt.Printf("a=%d (%T)\n", a, a)
+	fmt.Printf("b=%.2f (%T)\n", b, b)
+	fmt.Printf("c=%s (%T)\n", c, c)
+	fmt.Printf("d=%v (%T)\n", d, d)
+	fmt.Printf("e=%c (%T)\n", e, e)
+	fmt.Printf("f=%v (%T)\n", f, f)
+	//%d for integers, %.2f for floats with 2 decimal places, %s for strings, %v for booleans (prints true or false), %c for runes (prints the character), and %v for complex numbers (prints in the form (real+imaginaryi))
 }
