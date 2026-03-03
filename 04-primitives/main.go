@@ -56,6 +56,7 @@ const iotaVar2 = iota + 1
 
 func main() {
 	var a int = 10
+	// var a2 int8 = 200 // cannot use 200 (untyped int constant) as int8 value in variable declaration (overflows)compilerNumericOverflow
 	var b float32 = 3.14
 	var c string = "hola"
 	var d bool = true
